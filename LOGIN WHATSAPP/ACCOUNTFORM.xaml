@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="LOGIN_WHATSAPP.ACCOUNTFORM"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LOGIN_WHATSAPP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                MaxWidth="400" 
+                Padding="20">
+
+                
+                <TextBlock 
+                    Text="Create Account" 
+                    Style="{ThemeResource HeaderTextBlockStyle}"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,40"/>
+
+                
+                <TextBox 
+                    x:Name="FullNameTextBox"
+                    Header="Full Name"
+                    PlaceholderText="Enter your full name"
+                    Margin="0,0,0,16"/>
+
+                
+                <TextBox 
+                    x:Name="PhoneNumberTextBox"
+                    Header="Phone Number"
+                    PlaceholderText="Enter your phone number"
+                    InputScope="TelephoneNumber"
+                    Margin="0,0,0,16"/>
+
+                
+                <TextBox 
+                    x:Name="EmailTextBox"
+                    Header="Email"
+                    PlaceholderText="Enter your email"
+                    InputScope="EmailNameOrAddress"
+                    Margin="0,0,0,16"/>
+
+                
+                <PasswordBox 
+                    x:Name="PasswordBox"
+                    Header="Password"
+                    PlaceholderText="Create a password"
+                    Margin="0,0,0,24"/>
+
+                
+                <TextBlock 
+                    x:Name="ErrorMessageText"
+                    Foreground="Red"
+                    TextWrapping="Wrap"
+                    TextAlignment="Center"
+                    Margin="0,0,0,16"
+                    Visibility="Collapsed"/>
+
+                
+                <Button 
+                    x:Name="SignUpButton"
+                    Content="Sign Up"
+                    Click="SignUpButton_Click"
+                    Style="{ThemeResource AccentButtonStyle}"
+                    HorizontalAlignment="Stretch"
+                    Margin="0,0,0,24"/>
+
+                
+                <HyperlinkButton 
+                    x:Name="LoginLink"
+                    Content="Already have an account? Login"
+                    
+                    HorizontalAlignment="Center" Click="LoginLink_Click"/>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="LOGIN_WHATSAPP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LOGIN_WHATSAPP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" MaxWidth="400">
+            <!-- App Logo -->
+            <Image Source="Assets/THINK.JPG" Height="100" Margin="0,0,0,40"/>
+
+            <!-- Login Form -->
+            <TextBox x:Name="EmailTextBox" 
+                     PlaceholderText="Email OR Number"
+                     Margin="0,0,0,12"/>
+
+            <PasswordBox x:Name="PasswordBox" 
+                        PlaceholderText="Password"
+                        Margin="0,0,0,12"/>
+
+            <Button x:Name="LoginButton" 
+                    Content="Login" 
+                    HorizontalAlignment="Stretch"
+                    Background="#25D366"
+                    Foreground="White"
+                    Margin="0,0,0,12" Click="LoginButton_ClickS"/>
+
+            <HyperlinkButton x:Name="ForgotPasswordLink"
+                            Content="Forgot Password?"
+                            HorizontalAlignment="Center" 
+                             Click="ForgotPasswordLink_Click"/>
+
+            <TextBlock x:Name="ErrorMessageText"
+                       Foreground="Red"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Margin="0,12,0,0"/>
+            <HyperlinkButton x:Name="CREATEACCOUNT"
+                Content="CREATE ACCOUNT?"
+                HorizontalAlignment="Center" Click="SIGN_UP"
+                 />
+        </StackPanel>
+    </Grid>
+</Page>
